@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router';
 
 const Navber = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,42 +15,46 @@ const Navber = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo Section */}
-          <div className="flex items-center space-x-3">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-gray-900 to-slate-800 rounded-xl flex items-center justify-center transform rotate-12 shadow-lg shadow-gray-400/25">
-                <span className="text-white font-bold text-xl transform -rotate-12">
-                  Z
-                </span>
-                {/* Lightning bolt effect */}
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-cyan-500 rounded-full animate-ping"></div>
+          <NavLink to="/">
+            <div className="flex items-center space-x-3">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-gray-900 to-slate-800 rounded-xl flex items-center justify-center transform rotate-12 shadow-lg shadow-gray-400/25">
+                  <span className="text-white font-bold text-xl transform -rotate-12">
+                    Z
+                  </span>
+                  {/* Lightning bolt effect */}
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-cyan-500 rounded-full animate-ping"></div>
+                </div>
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full border-2 border-white"></div>
               </div>
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full border-2 border-white"></div>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold text-gray-900">
+                  ZapShift
+                </span>
+                <div className="h-1 w-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-1"></div>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold text-gray-900">ZapShift</span>
-              <div className="h-1 w-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-1"></div>
-            </div>
-          </div>
+          </NavLink>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#"
+            <NavLink
+              to="service"
               className="relative text-gray-600 hover:text-gray-900 font-medium transition-all duration-300 group"
             >
               Services
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 transition-all duration-300 group-hover:w-full"></span>
               <div className="absolute -top-2 -right-2 w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </a>
+            </NavLink>
 
-            <a
-              href="#"
+            <NavLink
+              to="/coverage"
               className="relative text-gray-600 hover:text-gray-900 font-medium transition-all duration-300 group"
             >
               Coverage
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
               <div className="absolute -top-2 -right-2 w-2 h-2 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </a>
+            </NavLink>
 
             <a
               href="#"
@@ -135,15 +140,15 @@ const Navber = () => {
               </div>
             </a>
 
-            <a
-              href="#"
+            <NavLink
+              to="coverage"
               className="block py-3 px-4 text-gray-600 hover:text-gray-900 font-medium rounded-lg hover:bg-gray-50 transition-all duration-300 group border-l-4 border-indigo-500"
             >
               <div className="flex items-center justify-between">
                 <span>Coverage</span>
                 <div className="w-2 h-2 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-            </a>
+            </NavLink>
 
             <a
               href="#"

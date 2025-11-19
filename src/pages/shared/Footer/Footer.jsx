@@ -294,7 +294,7 @@ const Footer = () => {
       </div>
 
       {/* Custom CSS for Animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%,
           100% {
